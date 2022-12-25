@@ -3,16 +3,16 @@ import java.util.stream.Collectors;
 
 public class Main {
    public static void main(String[] args) {
-      Course course1 = new CourseImpl("Java");
-      Course course2 = new CourseImpl("JavaCore");
-      Course course3 = new CourseImpl("Linux");
+      Course course1 = new CourseImpl("Математика");
+      Course course2 = new CourseImpl("Русский");
+      Course course3 = new CourseImpl("Химия");
 
       List<Student> students = Arrays.asList(
-              new StudentImpl("Ivanov", Arrays.asList(course1, course2)),
-              new StudentImpl("Petrov", Arrays.asList(course2, course3)),
-              new StudentImpl("Andreev", Arrays.asList(course1, course3)),
-              new StudentImpl("Sidorov", Arrays.asList(course1, course2, course3)),
-              new StudentImpl("Antonov", null)
+              new StudentImpl("Симонов", Arrays.asList(course1, course2)),
+              new StudentImpl("Данилов", Arrays.asList(course2, course3)),
+              new StudentImpl("Пупыркин", Arrays.asList(course1, course3)),
+              new StudentImpl("Федоров", Arrays.asList(course1, course2, course3)),
+              new StudentImpl("Сергеев", null)
       );
 
       System.out.println(getUniqueCourses(students));
